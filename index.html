@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ColorPicker 1</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="main">
+      <ul class="colors-box">
+        <li class="color color1"></li>
+        <li class="color color2"></li>
+        <li class="color color3"></li>
+        <li class="color color4"></li>
+        <li class="color color5"></li>
+        <li class="color color6"></li>
+      </ul>
+      <div class="selected_color">Selected Color</div>
+    </div>
+    <script>
+      // your code here...
+
+       // your code here...
+      // var colors = document.querySelectorAll(".color");
+      var colorBox = document.querySelector(".colors-box");
+      var selectedColor = document.querySelector(".selected_color");
+      
+      // for(const item of colors){
+      //   item.addEventListener("click" , changeColor);
+      // }
+      colorBox.addEventListener("click" , changeColor);
+
+      function changeColor(event){
+        var clicked = event.target;
+        var color = window.getComputedStyle(clicked).backgroundColor;
+        selectedColor.style.backgroundColor = color;
+        console.log(color);
+      }
+    </script>
+  </body>
+</html>
